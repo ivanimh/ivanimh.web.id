@@ -1,0 +1,390 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+    </script>
+    <title>Document</title>
+  </head>
+
+  <body class="font-sans text-gray-800 bg-white">
+    <header class="w-full bg-white top-0 z-50">
+      <nav class="max-w-[1600px] mx-auto flex justify-between items-center h-[54px] px-4 md:px-5">
+        <div class="flex items-center flex-shrink-0">
+          <a href="index.html">
+            <img class="scale-50" src="images/microsoft_logo.png" alt="Microsoft Logo">
+          </a>
+        </div>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 hover:bg-gray-100 rounded" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <ul class="hidden lg:flex gap-6 items-center flex-1 ml-6">
+          <li>
+            <a href="biodata.html" class="text-[13px] text-[#262626] hover:underline font-normal">Biodata</a>
+          </li>
+          <li>
+            <a href="contact_us.html" class="text-[13px] text-[#262626] hover:underline font-normal">Contact Us</a>
+          </li>
+          <li>
+            <a href="posts.html" class="text-[13px] text-[#262626] hover:underline font-normal">Posts</a>
+          </li>
+          <li>
+            <a href="freepage.html" class="text-[13px] text-[#262626] hover:underline font-normal">Gallery</a>
+          </li>
+          <li>
+            <a href="#" class="text-[13px] text-[#262626] hover:underline font-normal">Dukungan</a>
+          </li>
+        </ul>
+        <div class="flex mx-35 items-center gap-2">
+          <button class="text-[13px] text-[#262626] hover:underline hidden lg:block whitespace-nowrap">Semua Microsoft</button>
+          <button class="p-2 hover:bg-gray-100 rounded flex-shrink-0">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <a href="#" class="flex items-center gap-1 text-[13px] text-[#262626] hover:underline flex-shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span class="hidden sm:inline">Keranjang</span>
+          </a>
+          <a href="#" class="text-[13px] text-[#262626] hover:underline hidden sm:block flex-shrink-0">Masuk</a>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200">
+        <div class="max-w-[1600px] mx-auto px-4 py-3">
+          <ul class="flex flex-col gap-3">
+            <li>
+              <a href="biodata.html" class="text-[13px] text-[#262626] hover:underline font-normal">Biodata</a>
+            </li>
+            <li>
+              <a href="contact_us.html" class="text-[13px] text-[#262626] hover:underline font-normal">Contact Us</a>
+            </li>
+            <li>
+              <a href="posts.html" class="text-[13px] text-[#262626] hover:underline font-normal">Posts</a>
+            </li>
+            <li>
+              <a href="freepage.html" class="text-[13px] text-[#262626] hover:underline font-normal">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="text-[13px] text-[#262626] hover:underline font-normal">Dukungan</a>
+            </li>
+            <li>
+              <a href="#" class="text-[13px] text-[#262626] hover:underline block sm:hidden">Masuk</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-3xl mx-auto px-6 py-12">
+      <section id="hobby" class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4">Hobbies</h2>
+        <p class="text-sm text-gray-600 mb-4">Here are all my hobbies.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <figure class="relative rounded overflow-hidden border h-28 bg-gray-100">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('images/movies.jpg')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+              <figcaption class="text-white text-sm leading-tight">
+                <div class="font-semibold">Watching Movies</div>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="relative rounded overflow-hidden border h-28 bg-gray-100">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('images/music.jpg')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+              <figcaption class="text-white text-sm leading-tight">
+                <div class="font-semibold">Listening to some Music</div>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="relative rounded overflow-hidden border h-28 bg-gray-100">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('images/solving.jpg')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+              <figcaption class="text-white text-sm leading-tight">
+                <div class="font-semibold">Problem Solving</div>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="relative rounded overflow-hidden border h-28 bg-gray-100">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('images/games.jpg')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+              <figcaption class="text-white text-sm leading-tight">
+                <div class="font-semibold">Playing Games</div>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </section>
+      <section id="blog">
+        <h2 class="text-2xl font-semibold mb-4">Blog</h2>
+        <div class="space-y-5">
+          <article class="p-4 border rounded">
+            <h3 class="font-semibold">Start small</h3>
+            <p class="mt-2 text-sm text-gray-600">Don’t begin with a big plan. Pick one tiny thing to do first — one page, one sketch, or one short test. Finishing that small thing gives you energy to keep going.</p>
+          </article>
+          <article class="p-4 border rounded">
+            <h3 class="font-semibold">Use a tiny plan</h3>
+            <p class="mt-2 text-sm text-gray-600">Write a 3-line plan: goal, first step, and how you’ll check it. Keep it for 10 minutes before you start. This keeps you focused and stops you from changing directions too quickly.</p>
+          </article>
+        </div>
+      </section>
+      <aside id="trivia" class="mt-8 p-4 border rounded bg-gradient-to-r from-white to-gray-50 shadow-sm">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0 text-2xl">🎲</div>
+          <div class="flex-1">
+            <div class="flex flex-col gap-2">
+              <h3 class="font-semibold">Random Fun Fact</h3>
+              <p id="funfact-text" class="text-sm text-gray-600 min-h-[48px] mb-0"> Loading a fun fact… </p>
+              <div class="flex gap-2">
+                <button id="funfact-btn" class="px-3 py-1 text-sm border rounded hover:bg-gray-100">Show another</button>
+              </div>
+              <p class="text-xs text-gray-400 mt-1">Tip: Just press Show Another</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer class="bg-gray-100 px-8 py-12 text-gray-600 text-xs">
+      <div class="grid grid-cols-2 mx-15 :grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
+        <div>
+          <h4 class="font-semibold text-gray-600 mb-4 text-sm">Yang Baru</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Copilot untuk organisasi</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Copilot untuk penggunaan pribadi</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft 365</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft 365 family</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft 365 Personal</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Windows 11 apps</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-600 mb-4 text-sm">Microsoft Store</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Profil akun</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Pusat Unduh</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Pengembalian</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Pelacakan pesanan</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-600 mb-4 text-sm">Pendidikan</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Education</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Perangkat untuk pendidikan</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Teams untuk Pendidikan</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft 365 Education</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Office Education</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Pelatihan dan pengembangan pengajar</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Diskon untuk pelajar dan orang tua</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Azure untuk pelajar</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-600 mb-4 text-sm">Bisnis</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Cloud</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Security</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Azure</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Dynamics 365</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft 365</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Advertising</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft 365 Copilot</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Teams</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-600 mb-4 text-sm">Pengembang & TI</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Pengembang Microsoft</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Learn</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Dukungan aplikasi marketplace AI</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Tech Community</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Marketplace</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Microsoft Power Platform</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Visual Studio</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-600 mb-4 text-sm">Perusahaan</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Karier</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Tentang Microsoft</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Berita perusahaan</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Privasi di Microsoft</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Investor</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-900 hover:underline">Keberlanjutan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-between items-center pt-6">
+        <div class="flex items-center mx-15 flex-wrap gap-6">
+          <a href="#" class="flex items-center gap-2 hover:text-gray-900 hover:underline">
+            <span>🌐</span>
+            <span>Indonesia (Indonesia)</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 hover:text-gray-900 hover:underline">
+            <span>🛡️</span>
+            <span>Pilihan Privasi Anda</span>
+          </a>
+          <a href="#" class="hover:text-gray-900 hover:underline">Privasi Kesehatan Konsumen</a>
+        </div>
+        <ul class="flex flex-wrap mx-15 gap-5 mt-4 lg:mt-0">
+          <li>
+            <a href="#" class="hover:text-gray-900 hover:underline">Hubungi Microsoft</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-gray-900 hover:underline">Privasi</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-gray-900 hover:underline">Persyaratan penggunaan</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-gray-900 hover:underline">Merek dagang</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-gray-900 hover:underline">Mengenai iklan kami</a>
+          </li>
+          <li class="text-gray-600">&copy; Microsoft 2025</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+          mobileBtn.addEventListener('click', () => {
+            const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+            mobileBtn.setAttribute('aria-expanded', String(!expanded));
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+        const funfactList = ['Microsoft was founded in 1975 by Bill Gates and Paul Allen.', 'The first website ever created is still online (info.cern.ch).', 'Tailwind CSS is a utility-first CSS framework that encourages composing styles directly in HTML.', 'The small arrow icon in many apps is called a "caret".', "The world's first computer programmer was Ada Lovelace (19th century).", 'The first domain name ever registered was symbolics.com in 1985.'];
+        const funfactText = document.getElementById('funfact-text');
+        const funfactBtn = document.getElementById('funfact-btn');
+        if (!funfactText) return;
+        funfactText.style.transition = 'opacity 220ms ease, transform 220ms ease';
+        funfactText.style.willChange = 'opacity, transform';
+        funfactText.classList.add('min-h-[48px]');
+        if (!funfactText.style.minHeight) funfactText.style.minHeight = '48px';
+        let currentIndex = -1;
+
+        function showRandom() {
+          if (!funfactList.length) {
+            funfactText.textContent = '';
+            return;
+          }
+          let i;
+          if (funfactList.length === 1) {
+            i = 0;
+          } else {
+            do {
+              i = Math.floor(Math.random() * funfactList.length);
+            } while (i === currentIndex);
+          }
+          currentIndex = i;
+          const text = funfactList[i];
+          funfactText.style.opacity = 0;
+          funfactText.style.transform = 'translateY(6px)';
+          setTimeout(() => {
+            funfactText.textContent = text;
+            funfactText.style.transform = 'translateY(0)';
+            funfactText.style.opacity = 1;
+          }, 150);
+        }
+        if (funfactBtn) {
+          funfactBtn.addEventListener('click', showRandom);
+        }
+        requestAnimationFrame(showRandom);
+      });
+    </script>
+  </body>
+
+  </html>

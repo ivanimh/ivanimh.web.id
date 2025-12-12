@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
   </script>
-  <title>Final Project</title>
+  <title>Document</title>
 </head>
 
-<body class="font-sans text-gray-800 bg-white">
+<body class="font-sans text-gray-800 bg-white min-h-screen flex flex-col">
   <header class="w-full bg-white top-0 z-50">
     <nav class="max-w-[1600px] mx-auto flex justify-between items-center h-[54px] px-4 md:px-5">
       <div class="flex items-center flex-shrink-0">
@@ -22,6 +22,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
+
       <ul class="hidden lg:flex gap-6 items-center flex-1 ml-6">
         <li>
           <a href="biodata.html" class="text-[13px] text-[#262626] hover:underline font-normal">Biodata</a>
@@ -39,6 +40,7 @@
           <a href="#" class="text-[13px] text-[#262626] hover:underline font-normal">Dukungan</a>
         </li>
       </ul>
+
       <div class="flex mx-35 items-center gap-2">
         <button class="text-[13px] text-[#262626] hover:underline hidden lg:block whitespace-nowrap">Semua Microsoft</button>
         <button class="p-2 hover:bg-gray-100 rounded flex-shrink-0">
@@ -55,6 +57,7 @@
         <a href="#" class="text-[13px] text-[#262626] hover:underline hidden sm:block flex-shrink-0">Masuk</a>
       </div>
     </nav>
+
     <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200">
       <div class="max-w-[1600px] mx-auto px-4 py-3">
         <ul class="flex flex-col gap-3">
@@ -80,7 +83,6 @@
       </div>
     </div>
   </header>
-
   <script>
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -98,120 +100,211 @@
     });
   </script>
 
-  <main>
-    <section class="relative min-h-[520px] flex items-center justify-center md:justify-start px-6 md:px-24 py-16 overflow-hidden bg-cover bg-left-center text-gray-900" style="background-image: url('images/hero.avif');" aria-label="Hero">
-      <div class="relative z-50 w-full md:w-[46%] max-w-[520px] p-6 md:p-8 text-center md:text-left">
-        <h1 class="text-4xl sm:text-5xl font-semibold mb-3 text-white">Ivan Miracle Halim</h1>
-        <p class="text-base sm:text-lg text-white mb-5">The Final Project.</p>
-        <div class="space-y-3 md:space-y-4">
-          <a href="biodata.html" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition"> See My Biodata</a>
-          <div>
-            <a href="#" class="inline-block font-medium text-white hover:underline"> Lihat opsi Microsoft 365 lainnya &rsaquo; </a>
-          </div>
+  <main class="flex-1 flex items-start justify-center p-6">
+    <div class="w-full max-w-3xl">
+      <header class="mb-6">
+        <h1 class="text-2xl font-semibold">Fetch Post</h1>
+        <p class="mt-1 text-sm text-gray-600"> Enter the post ID (1–100) then press <strong>Load</strong>. </p>
+      </header>
+      <div class="mb-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <label for="postIdInput" class="sr-only">Post ID</label>
+          <input id="postIdInput" type="number" min="1" max="100" step="1" value="51" class="w-32 px-3 py-2 rounded-xs border focus:ring-2 focus:ring-sky-300 focus:outline-none" aria-label="Post ID (1 sampai 100)" />
+          <button id="loadBtn" class="px-4 py-2 bg-sky-600 text-white rounded-xs shadow hover:bg-sky-700"> Load </button>
+        </div>
+        <div id="status" role="status" aria-live="polite" class="ml-auto text-sm text-gray-600">
         </div>
       </div>
-    </section>
-    <section class="flex justify-center underline decoration-sky-700 items-center flex-wrap gap-12 py-8 px-8 text-center">
-      <div class="flex flex-col items-center gap-3">
-        <img src="images/fti.png" alt="FTI Unai" class="w-12 h-12">
-        <a href="https://fti.unai.edu/" class="font-medium text-sky-700 hover:underline">FTI Unai</a>
+      <div id="validation" class="mb-4 text-sm text-red-600" aria-live="polite">
       </div>
-      <div class="flex flex-col items-center gap-3">
-        <img src="images/quicklink-controller.png" alt="Controller" class="w-12 h-12">
-        <a href="#" class="font-medium text-sky-700 hover:underline">Beli Game PC dan PC Game Pass</a>
-      </div>
-      <div class="flex flex-col items-center gap-3">
-        <img src="images/unai.png" alt="UNAI Website" class="w-12 h-12">
-        <a href="https://unai.edu/" class="font-medium text-sky-700 hover:underline">UNAI Website</a>
-      </div>
-    </section>
-
-    <section class="px-8 py-8">
-      <div class="flex flex-wrap gap-5 justify-center">
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/onenote.png" alt="OneNote on a tablet" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">OneNote</h3>
-            <p class="text-gray-700 mb-4">Kelola catatan dan hidup Anda.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Pelajari selengkapnya</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/microsoft-onedrive.png" alt="Woman using OneDrive" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Microsoft OneDrive</h3>
-            <p class="text-gray-700 mb-4">Simpan file serta foto ke OneDrive dan akses dari perangkat apa saja, di mana saja.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Pelajari selengkapnya</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/bing.png" alt="Bing Wallpaper landscape" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Dekatkan dunia dengan Bing Wallpaper</h3>
-            <p class="text-gray-700 mb-4">Unduh aplikasi gratis dan nikmati pemandangan menakjubkan berlatar belakang baru setiap hari.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Dapatkan Wallpaper Bing</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/microsoft-edge.png" alt="Microsoft Edge logo" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Microsoft Edge</h3>
-            <p class="text-gray-700 mb-4">Performa kelas dunia dengan lebih banyak privasi, produktivitas, dan nilai saat Anda menjelajah.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Unduh sekarang</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="relative w-full md:w-[90%] mx-auto my-4 md:my-8">
-      <img src="images/pc-game-pass.png" alt="PC Game Pass" class="w-full block">
-      <div class="absolute inset-0 flex items-center px-4 md:px-0 md:top-1/2 md:left-[5%] md:-translate-y-1/2">
-        <div class="text-white max-w-full md:max-w-[40%]">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 md:mb-4"> PC Game Pass </h2>
-          <p class="text-sm sm:text-base md:text-lg mb-4 md:mb-6 line-clamp-3 md:line-clamp-none"> Dapatkan akses ke pustaka game PC berkualitas tinggi dan keanggotaan EA Play. Game baru selalu tersedia. </p>
-          <a href="#" class="inline-block px-3 py-2 md:px-4 md:py-2 rounded text-sm sm:text-base md:text-base bg-sky-700 text-white font-semibold hover:bg-sky-800 transition"> Bergabung dengan PC Game Pass Sekarang </a>
+      <section id="result" aria-live="polite">
+        <div id="placeholder" class="bg-white border-xs rounded-xs p-6 shadow-sm">
+          <p class="text-gray-600">Press <strong>Load</strong> to retrieve data from <code>https://jsonplaceholder.typicode.com/posts/&lt;ID&gt;</code>.</p>
         </div>
-      </div>
-    </section>
-    <section class="px-8 py-8 mt-8">
-      <h2 class="text-4xl font-semibold mb-8 mx-15">Untuk bisnis</h2>
-      <div class="flex flex-wrap gap-5 justify-center">
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/microsoft-365.png" alt="Copilot interface" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Microsoft 365 Copilot</h3>
-            <p class="text-gray-700 mb-4">Hemat waktu dan fokus pada hal yang paling penting dengan AI di Microsoft 365 untuk bisnis.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Pelajari selengkapnya</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/ai.png" alt="AI abstract graphic" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Bergabunglah dengan era AI</h3>
-            <p class="text-gray-700 mb-4">Buat, komunikasikan, dan buat kode dengan solusi Microsoft AI terbaru.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Jelajahi solusi AI</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/visual-studio-2022.png" alt="Visual Studio icon" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Visual Studio 2022</h3>
-            <p class="text-gray-700 mb-4">Dapatkan IDE terlengkap untuk pengembang .NET dan C++ di Windows untuk membuat web, cloud, desktop, aplikasi seluler, layanan, dan game.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Unduh Visual Studio 2022</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/pc-cloud-windows.png" alt="Woman using cloud PC" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Selamat datang di PC Cloud Windows 365 Anda</h3>
-            <p class="text-gray-700 mb-4">Streaming pengalaman Windows Anda dengan aman dari cloud Microsoft ke perangkat apa pun.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Dapatkan sekarang</a>
-          </div>
-        </article>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
   
+  <script>
+    const postIdInput = document.getElementById('postIdInput');
+    const loadBtn = document.getElementById('loadBtn');
+    const statusEl = document.getElementById('status');
+    const resultEl = document.getElementById('result');
+    const validationEl = document.getElementById('validation');
+
+    function escapeHtml(str) {
+      if (str === null || typeof str === 'undefined') return '';
+      return String(str).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;').replaceAll('\n', '<br/>');
+    }
+
+    function buildEndpoint(id) {
+      return `https://jsonplaceholder.typicode.com/posts/${id}`;
+    }
+
+    function showLoading(msg = 'Memuat...') {
+      statusEl.textContent = msg;
+      validationEl.textContent = '';
+      resultEl.innerHTML = `
+        <div class="bg-white border rounded-xs p-6 shadow-sm flex items-center gap-4">
+          <svg class="w-6 h-6 animate-spin text-sky-600" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-opacity="0.25" stroke-width="4">
+</circle>
+            <path d="M22 12a10 10 0 00-10-10" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+</path>
+          </svg>
+          <div class="text-sm text-gray-700">${escapeHtml(msg)}</div>
+        </div>
+      `;
+    }
+
+    function showError(message) {
+      statusEl.textContent = 'Error';
+      resultEl.innerHTML = `
+        <div class="bg-red-50 border border-red-100 text-red-700 rounded-lg p-6 shadow-sm">
+          <h3 class="font-semibold mb-2">Terjadi kesalahan</h3>
+          <p class="text-sm">${escapeHtml(message)}</p>
+        </div>
+      `;
+    }
+
+    function showPost(data, idRequested) {
+      statusEl.textContent = 'Success';
+      const endpoint = buildEndpoint(idRequested);
+      resultEl.innerHTML = `
+        <article class="bg-white border rounded-xs p-6 shadow-sm space-y-4">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h2 class="text-xl font-semibold text-sky-700">#${escapeHtml(String(data.id))} — ${escapeHtml(data.title)}</h2>
+              <p class="mt-1 text-sm text-gray-500">Source: <code>${escapeHtml(endpoint)}</code>
+</p>
+            </div>
+            <div class="text-sm text-gray-500">User ID: <span class="font-medium">${escapeHtml(String(data.userId))}</span>
+</div>
+          </div>
+
+          <p class="text-gray-800 leading-relaxed">${escapeHtml(data.body)}</p>
+
+          <div class="pt-3 border-t flex items-center justify-between">
+            <div class="text-xs text-gray-500">Fetched at: <span id="fetchedAt">${escapeHtml(new Date().toLocaleString())}</span>
+</div>
+            <div class="flex items-center gap-2">
+              <button id="copyBtn" class="px-3 py-1 text-sm border rounded hover:bg-gray-50">Copy JSON</button>
+              <a href="${endpoint}" target="_blank" rel="noopener" class="text-sm underline text-sky-600">Open raw</a>
+            </div>
+          </div>
+        </article>
+      `;
+      const copyBtn = document.getElementById('copyBtn');
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard?.writeText(JSON.stringify(data, null, 2)).then(() => {
+          statusEl.textContent = 'JSON copied to clipboard';
+          setTimeout(() => statusEl.textContent = 'Sukses', 1500);
+        }).catch(() => {
+          statusEl.textContent = 'Could not copy';
+          setTimeout(() => statusEl.textContent = 'Sukses', 1500);
+        });
+      });
+    }
+
+    function validateId(val) {
+      if (val === '' || val === null || typeof val === 'undefined') {
+        return {
+          ok: false,
+          message: 'ID tidak boleh kosong.'
+        };
+      }
+      const n = Number(val);
+      if (!Number.isInteger(n) || n <= 0) {
+        return {
+          ok: false,
+          message: 'Masukkan angka bulat positif.'
+        };
+      }
+      if (n < 1 || n > 100) {
+        return {
+          ok: false,
+          message: 'ID harus di antara 1 dan 100 (jsonplaceholder punya 100 post).'
+        };
+      }
+      return {
+        ok: true,
+        value: n
+      };
+    }
+
+    function setLoadingState(loading) {
+      postIdInput.disabled = loading;
+      loadBtn.disabled = loading;
+      if (loading) {
+        loadBtn.classList.add('opacity-70', 'cursor-wait');
+      } else {
+        loadBtn.classList.remove('opacity-70', 'cursor-wait');
+      }
+    }
+    async function fetchPostByInput() {
+      const inputVal = postIdInput.value.trim();
+      const check = validateId(inputVal);
+      if (!check.ok) {
+        validationEl.textContent = check.message;
+        return;
+      }
+      const id = check.value;
+      const endpoint = buildEndpoint(id);
+      try {
+        setLoadingState(true);
+        showLoading('Loading data...');
+        const res = await fetch(endpoint, {
+          cache: 'no-store'
+        });
+        if (!res.ok) {
+          if (res.status === 404) {
+            showError('Post tidak ditemukan (404). Periksa kembali ID yang diminta.');
+          } else {
+            showError(`Server mengembalikan status ${res.status}.`);
+          }
+          return;
+        }
+        const data = await res.json();
+        if (!data || typeof data.id === 'undefined' || typeof data.title === 'undefined') {
+          showError('Format data tidak sesuai yang diharapkan.');
+          return;
+        }
+        showPost(data, id);
+      } catch (err) {
+        showError('Gagal mengambil data. Periksa koneksi jaringan atau coba lagi. ' + (err && err.message ? err.message : ''));
+        console.error(err);
+      } finally {
+        setLoadingState(false);
+      }
+    }
+    loadBtn.addEventListener('click', fetchPostByInput);
+    postIdInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        fetchPostByInput();
+      }
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        statusEl.textContent = '';
+        validationEl.textContent = '';
+        resultEl.innerHTML = `<div id="placeholder" class="bg-white border rounded-lg p-6 shadow-sm">
+          <p class="text-gray-600">Press <strong>Load</strong> to retrieve data from <code>https://jsonplaceholder.typicode.com/posts/&lt;ID&gt;</code>.</p>
+        </div>`;
+      }
+    });
+  </script>
+  <style>
+    .animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
   <footer class="bg-gray-100 px-8 py-12 text-gray-600 text-xs">
     <div class="grid grid-cols-2 mx-15 :grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
       <div>

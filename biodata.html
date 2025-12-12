@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
   </script>
-  <title>Final Project</title>
+  <title>My Biodata</title>
 </head>
 
-<body class="font-sans text-gray-800 bg-white">
+<body>
   <header class="w-full bg-white top-0 z-50">
     <nav class="max-w-[1600px] mx-auto flex justify-between items-center h-[54px] px-4 md:px-5">
       <div class="flex items-center flex-shrink-0">
@@ -17,11 +17,13 @@
           <img class="scale-50" src="images/microsoft_logo.png" alt="Microsoft Logo">
         </a>
       </div>
+
       <button id="mobile-menu-btn" class="lg:hidden p-2 hover:bg-gray-100 rounded" aria-label="Toggle menu" aria-expanded="false">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
+
       <ul class="hidden lg:flex gap-6 items-center flex-1 ml-6">
         <li>
           <a href="biodata.html" class="text-[13px] text-[#262626] hover:underline font-normal">Biodata</a>
@@ -39,6 +41,7 @@
           <a href="#" class="text-[13px] text-[#262626] hover:underline font-normal">Dukungan</a>
         </li>
       </ul>
+
       <div class="flex mx-35 items-center gap-2">
         <button class="text-[13px] text-[#262626] hover:underline hidden lg:block whitespace-nowrap">Semua Microsoft</button>
         <button class="p-2 hover:bg-gray-100 rounded flex-shrink-0">
@@ -55,6 +58,7 @@
         <a href="#" class="text-[13px] text-[#262626] hover:underline hidden sm:block flex-shrink-0">Masuk</a>
       </div>
     </nav>
+
     <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200">
       <div class="max-w-[1600px] mx-auto px-4 py-3">
         <ul class="flex flex-col gap-3">
@@ -80,7 +84,6 @@
       </div>
     </div>
   </header>
-
   <script>
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -97,121 +100,65 @@
       });
     });
   </script>
+  <main class="flex items-center justify-center p-6">
+    <article class="w-full max-w-3xl bg-white rounded-xs shadow-md overflow-hidden border">
+      <div class="h-1 bg-gradient-to-r from-[#043d6b] via-[#0067b8] to-[#06b6d4]">
+      </div>
+      <div class="p-6 md:p-8">
+        <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div class="md:col-span-1 flex justify-center md:justify-start">
+            <div class="w-40">
+              <img src="images/ivan.jpg" alt="Foto Ivan Miracle Halim" class="w-full h-52 object-cover rounded-lg shadow-sm border" />
+            </div>
+          </div>
+          <div class="md:col-span-2">
+            <h1 class="text-2xl font-semibold">Ivan Miracle Halim</h1>
+            <dl class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-700">
+              <div>
+                <dt class="text-gray-500 text-xs">Student ID (NIM)</dt>
+                <dd class="font-medium">2481051</dd>
+              </div>
+              <div>
+                <dt class="text-gray-500 text-xs">Faculty</dt>
+                <dd class="font-medium">Fakultas Teknologi Informasi (FTI)</dd>
+              </div>
+              <div>
+                <dt class="text-gray-500 text-xs">Hobbies</dt>
+                <dd>
+                  <ul class="list-disc ml-5">
+                    <li>Watching Movies</li>
+                    <li>Listen to Music</li>
+                    <li>Problem Solving</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt class="text-gray-500 text-xs">Skills</dt>
+                <dd class="mt-1 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-xs">C++</span>
+                  <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-xs">Python</span>
+                  <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-xs">HTML</span>
+                  <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-xs">Tailwind</span>
+                  <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-xs">Git</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
 
-  <main>
-    <section class="relative min-h-[520px] flex items-center justify-center md:justify-start px-6 md:px-24 py-16 overflow-hidden bg-cover bg-left-center text-gray-900" style="background-image: url('images/hero.avif');" aria-label="Hero">
-      <div class="relative z-50 w-full md:w-[46%] max-w-[520px] p-6 md:p-8 text-center md:text-left">
-        <h1 class="text-4xl sm:text-5xl font-semibold mb-3 text-white">Ivan Miracle Halim</h1>
-        <p class="text-base sm:text-lg text-white mb-5">The Final Project.</p>
-        <div class="space-y-3 md:space-y-4">
-          <a href="biodata.html" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition"> See My Biodata</a>
-          <div>
-            <a href="#" class="inline-block font-medium text-white hover:underline"> Lihat opsi Microsoft 365 lainnya &rsaquo; </a>
+        <section id="testimonial" class="mt-8">
+          <h2 class="text-lg font-semibold">Testimonial</h2>
+          <div class="mt-3 bg-gray-50 border rounded-md p-4 text-gray-700">
+            <p> Di kelas ini saya menikmati proses mengubah desain menjadi halaman web responsif. Tantangan kecil — seperti menyelaraskan tombol di beberapa kartu — mengajarkan pola layout praktis (<code>flex flex-col</code>, <code>items-stretch</code>, <code>mt-auto</code>) yang berdampak besar pada UX. </p>
+            <p class="mt-3"> Menghadapi konflik Git membuat saya mengubah kebiasaan: commit lebih sering, menulis pesan yang jelas, dan selalu melakukan <em>pull</em> sebelum mulai. Kebiasaan ini membuat kolaborasi jauh lebih lancar. </p>
+            <p class="mt-3 text-sm text-gray-500">— Ivan Miracle Halim (NIM: 2481051)</p>
           </div>
-        </div>
+        </section>
+        
+        <section id="contact" class="sr-only">Contact anchor</section>
       </div>
-    </section>
-    <section class="flex justify-center underline decoration-sky-700 items-center flex-wrap gap-12 py-8 px-8 text-center">
-      <div class="flex flex-col items-center gap-3">
-        <img src="images/fti.png" alt="FTI Unai" class="w-12 h-12">
-        <a href="https://fti.unai.edu/" class="font-medium text-sky-700 hover:underline">FTI Unai</a>
-      </div>
-      <div class="flex flex-col items-center gap-3">
-        <img src="images/quicklink-controller.png" alt="Controller" class="w-12 h-12">
-        <a href="#" class="font-medium text-sky-700 hover:underline">Beli Game PC dan PC Game Pass</a>
-      </div>
-      <div class="flex flex-col items-center gap-3">
-        <img src="images/unai.png" alt="UNAI Website" class="w-12 h-12">
-        <a href="https://unai.edu/" class="font-medium text-sky-700 hover:underline">UNAI Website</a>
-      </div>
-    </section>
-
-    <section class="px-8 py-8">
-      <div class="flex flex-wrap gap-5 justify-center">
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/onenote.png" alt="OneNote on a tablet" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">OneNote</h3>
-            <p class="text-gray-700 mb-4">Kelola catatan dan hidup Anda.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Pelajari selengkapnya</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/microsoft-onedrive.png" alt="Woman using OneDrive" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Microsoft OneDrive</h3>
-            <p class="text-gray-700 mb-4">Simpan file serta foto ke OneDrive dan akses dari perangkat apa saja, di mana saja.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Pelajari selengkapnya</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/bing.png" alt="Bing Wallpaper landscape" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Dekatkan dunia dengan Bing Wallpaper</h3>
-            <p class="text-gray-700 mb-4">Unduh aplikasi gratis dan nikmati pemandangan menakjubkan berlatar belakang baru setiap hari.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Dapatkan Wallpaper Bing</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/microsoft-edge.png" alt="Microsoft Edge logo" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Microsoft Edge</h3>
-            <p class="text-gray-700 mb-4">Performa kelas dunia dengan lebih banyak privasi, produktivitas, dan nilai saat Anda menjelajah.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Unduh sekarang</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="relative w-full md:w-[90%] mx-auto my-4 md:my-8">
-      <img src="images/pc-game-pass.png" alt="PC Game Pass" class="w-full block">
-      <div class="absolute inset-0 flex items-center px-4 md:px-0 md:top-1/2 md:left-[5%] md:-translate-y-1/2">
-        <div class="text-white max-w-full md:max-w-[40%]">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 md:mb-4"> PC Game Pass </h2>
-          <p class="text-sm sm:text-base md:text-lg mb-4 md:mb-6 line-clamp-3 md:line-clamp-none"> Dapatkan akses ke pustaka game PC berkualitas tinggi dan keanggotaan EA Play. Game baru selalu tersedia. </p>
-          <a href="#" class="inline-block px-3 py-2 md:px-4 md:py-2 rounded text-sm sm:text-base md:text-base bg-sky-700 text-white font-semibold hover:bg-sky-800 transition"> Bergabung dengan PC Game Pass Sekarang </a>
-        </div>
-      </div>
-    </section>
-    <section class="px-8 py-8 mt-8">
-      <h2 class="text-4xl font-semibold mb-8 mx-15">Untuk bisnis</h2>
-      <div class="flex flex-wrap gap-5 justify-center">
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/microsoft-365.png" alt="Copilot interface" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Microsoft 365 Copilot</h3>
-            <p class="text-gray-700 mb-4">Hemat waktu dan fokus pada hal yang paling penting dengan AI di Microsoft 365 untuk bisnis.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Pelajari selengkapnya</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/ai.png" alt="AI abstract graphic" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Bergabunglah dengan era AI</h3>
-            <p class="text-gray-700 mb-4">Buat, komunikasikan, dan buat kode dengan solusi Microsoft AI terbaru.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Jelajahi solusi AI</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/visual-studio-2022.png" alt="Visual Studio icon" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Visual Studio 2022</h3>
-            <p class="text-gray-700 mb-4">Dapatkan IDE terlengkap untuk pengembang .NET dan C++ di Windows untuk membuat web, cloud, desktop, aplikasi seluler, layanan, dan game.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Unduh Visual Studio 2022</a>
-          </div>
-        </article>
-        <article class="flex-1 min-w-[280px] max-w-[320px] border border-gray-300 overflow-hidden shadow-sm">
-          <img src="images/pc-cloud-windows.png" alt="Woman using cloud PC" class="w-full">
-          <div class="p-6">
-            <h3 class="font-semibold text-3xl mb-3">Selamat datang di PC Cloud Windows 365 Anda</h3>
-            <p class="text-gray-700 mb-4">Streaming pengalaman Windows Anda dengan aman dari cloud Microsoft ke perangkat apa pun.</p>
-            <a href="#" class="inline-block px-4 py-2 rounded-xs bg-sky-700 text-white font-semibold hover:bg-sky-800 transition">Dapatkan sekarang</a>
-          </div>
-        </article>
-      </div>
-    </section>
+    </article>
   </main>
-  
   <footer class="bg-gray-100 px-8 py-12 text-gray-600 text-xs">
     <div class="grid grid-cols-2 mx-15 :grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
       <div>
